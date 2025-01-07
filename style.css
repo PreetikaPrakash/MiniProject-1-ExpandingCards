@@ -1,16 +1,67 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,600;1,600&family=Playwrite+AU+SA:wght@100..400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,600;1,600&family=Playwrite+AU+SA:wght@100..400&display=swap");
 
-*{
-    box-sizing: border-box;
-
+* {
+  box-sizing: border-box;
 }
 
-body{
-    font-family: Cormorant;
-    margin:0;
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
+body {
+  font-family: Cormorant;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  width: 90vw;
+}
+
+.panel {
+  height: 80vh;
+  border-radius: 50px;
+  margin: 10px;
+  color: lime;
+  cursor: pointer;
+  background-size: cover;
+  background-position: center;
+  background-repeat: repeat;
+  flex: 0.6;
+  position: relative;
+  transition: flex 0.7s ease-in;
+  /* The CSS rule transition: flex 0.7s ease-in; defines how the flex property of an 
+    element should change over time when it is altered.
+    flex: The property being animated (in this case, the flex value).
+    0.7s: The duration of the transition (0.7 seconds).
+    ease-in: The timing function, which makes the transition start slowly and then speed up. */
+}
+
+.panel h3 {
+  font-size: 40px;
+  position: absolute;
+  bottom: 50px;
+  left: 20px;
+  margin: 0;
+  opacity: 0;
+}
+
+.panel.active {
+  flex: 5;
+}
+
+.panel.active h3 {
+  opacity: 1;
+  transition: opacity 0.3s ease-in 0.4s;
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 100vw;
+  }
+  .panel:nth-of-type(4),
+  .panel:nth-of-type(5) {
+    display: none;
+  }
 }
