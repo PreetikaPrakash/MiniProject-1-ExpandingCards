@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,600;1,600&family=Playwrite+AU+SA:wght@100..400&display=swap');
+
+*{
+    box-sizing: border-box;
+
+}
+
+body{
+    font-family: Cormorant;
+    margin:0;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
